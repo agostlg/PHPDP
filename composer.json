@@ -2,6 +2,7 @@
     "name": "luizgustavoagostinho/phpdp",
     "description": "PHP Design Patterns Examples",
     "require-dev": {
+        "squizlabs/php_codesniffer": "1.*",
         "phpunit/phpunit": "3.7.*"
     },
     "authors": [
