@@ -1,0 +1,22 @@
+{
+    "name": "luizgustavoagostinho/phpdp",
+    "description": "PHP Design Patterns Examples",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "authors": [
+        {
+            "name": "Luiz Agostinho",
+            "email": "luiz.gustavo.xd@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
