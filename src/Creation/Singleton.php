@@ -13,7 +13,9 @@ namespace Creation;
  */
 class Singleton
 {
-    /* @var $instance Singleton */
+    /**
+     * @var $instance Singleton
+     */
     private static $instance;
 
     /**
