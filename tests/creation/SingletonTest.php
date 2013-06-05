@@ -23,7 +23,21 @@ class SingletonTest extends \PHPUnit_Framework_TestCase
      */
     public function testClassExists()
     {
-        $singleton = new Singleton();
-        $this->assertInstanceOf('Creation\Singleton', $singleton);
+        $this->assertTrue(class_exists('Creation\Singleton'));
+    }
+
+    /**
+     * Create two objects of Singleton class instance and check
+     * if the value set on obj1 is the same get on obj2
+     */
+    public function testJustOneInstanceFromSingleton()
+    {
+        $obj1 =  Singleton::singleton();
+        $obj1->setNumber(1);
+
+        $obj2 =  Singleton::singleton();
+        $number = $obj2->getNumber();
+
+        $this->assertEquals(1, $number);
     }
 }
