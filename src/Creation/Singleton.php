@@ -15,6 +15,10 @@ class Singleton
 {
     /* @var $instance Singleton */
     private static $instance;
+
+    /**
+     * @var int
+     */
     protected $number = 0;
 
     /**
