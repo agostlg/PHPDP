@@ -7,7 +7,10 @@
 
 namespace Creation;
 
-
+/**
+ * Class Singleton
+ * @package Creation
+ */
 class Singleton
 {
     /* @var $instance Singleton */
@@ -20,7 +23,6 @@ class Singleton
     private function __construct()
     {
     }
-
 
     /**
      * The Singleton method
