@@ -14,18 +14,15 @@ use Structure\Facade\Person\Wallet;
 class Person
 {
     protected $name;
-    protected $birthday;
     protected $wallet;
 
     /**
      * @param $name
-     * @param $birthday
      * @param $money
      */
-    public function __construct($name, $birthday, $money)
+    public function __construct($name, $money = 0)
     {
         $this->name = $name;
-        $this->name = $birthday;
         $this->wallet = new Wallet($money);
     }
 

@@ -24,7 +24,7 @@ class Bank
         $this->accounts = new Accounts();
     }
 
-    public function newClient(Person $client, $money)
+    public function newClient(Person $client, $money = 0)
     {
         $account = new Account($client, $money);
         $this->accounts->add($account);
