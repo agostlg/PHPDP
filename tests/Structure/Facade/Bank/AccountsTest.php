@@ -7,6 +7,6 @@
  *   
  */
 
-class AccountsTest extends PHPUnit_Framework_TestCase {
+class AccountCollectionTest extends PHPUnit_Framework_TestCase {
 
 }

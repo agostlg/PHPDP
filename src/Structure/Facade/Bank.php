@@ -11,32 +11,32 @@ namespace Structure\Facade;
 
 
 use Structure\Facade\Bank\Account;
-use Structure\Facade\Bank\Accounts;
+use Structure\Facade\Bank\AccountCollection;
 
 class Bank
 {
     protected $name;
-    protected $accounts;
+    protected $accountCollection;
 
     public function __construct($name)
     {
         $this->name = $name;
-        $this->accounts = new Accounts();
+        $this->accountCollection = new AccountCollection();
     }
 
     public function newClient(Person $client, $money = 0)
     {
         $account = new Account($client, $money);
-        $this->accounts->add($account);
+        $this->accountCollection->add($account);
     }
 
     public function getAccount(Person $client)
     {
-        while ($this->accounts->valid()) {
-            if ($this->accounts->current()->getOwner() == $client) {
-                return $this->accounts->current();
+        while ($this->accountCollection->valid()) {
+            if ($this->accountCollection->current()->getOwner() == $client) {
+                return $this->accountCollection->current();
             }
-            $this->accounts->next();
+            $this->accountCollection->next();
         }
         return false;
     }

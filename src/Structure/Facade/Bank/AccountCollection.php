@@ -12,7 +12,7 @@ namespace Structure\Facade\Bank;
 
 use Structure\Facade\Bank\Account;
 
-class Accounts implements \Iterator
+class AccountCollection implements \Iterator
 {
     protected $clients = array();
     protected $index = 0;
